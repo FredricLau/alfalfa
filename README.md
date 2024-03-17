@@ -33,15 +33,17 @@ To build the source, you'll need the following packages:
 * `libglew-dev`
 * `libglfw3-dev`
 
+* `build-essential`
+* `libjpeg-dev`
+
 The rest should be straightforward:
 
 ```
-$ ./autogen.sh
-$ ./configure
-$ make -j$(nproc)
-$ sudo make install
+./autogen.sh
+./configure
+make -j$(nproc)
+sudo make install
 ```
-
 
 ## Salsify
 
@@ -60,5 +62,3 @@ salsify-sender --device [CAMERA, usually /dev/video0] [HOST] [PORT] 1337
 ```
 
 The default pixel format is YUV420. Most webcams support raw YUV420, however the frame rate might be low.
-
-
